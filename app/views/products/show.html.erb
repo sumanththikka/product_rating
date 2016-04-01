@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+<%= @product.name %>
+Current rating <%= @product_user_rating.rating %>
+<%= form_for @product_user_rating do |f| %>
+	Rating <%= f.text_field :rating %>
+	<%= f.hidden_field :product_id %>
+	<%= f.hidden_field :user_id %>
+	<%= f.submit "Submit" %>
+<% end %>
